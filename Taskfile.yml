@@ -1,0 +1,9 @@
+version: 3
+
+tasks:
+  clean:
+    cmd: rm *.pkg.tar.zst *.pkg.tar.zst.sig *.tar.gz
+  build:
+    cmd: makepkg -s -r -c
+  build-signed:
+    cmd: makepkg -s -r -c --sign --key FD8F04B290F3E2FD18CDAF9FD53A3E0AB76602CF
