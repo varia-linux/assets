@@ -11,5 +11,6 @@ sha256sums=('bc85f7350964e6760d6eebf4fa1d0f86f626ffd7cad36273d49673632d67eeff')
 package() {
     install -d -m755 "$pkgdir/etc/calamares/"
     
-    cp -r calamares/* "$pkgdir/etc/calamares/"
+    cp -r ${srcdir}/calamares "$pkgdir/etc/"
+    chmod -R 644 "${pkgdir}/etc/calamares"
 }
